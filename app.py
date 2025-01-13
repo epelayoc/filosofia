@@ -58,7 +58,6 @@ instrucciones = """
 Puedes usar el chat para 
 hacer preguntas específicas sobre la guía y el asistente te dará respuestas basadas en el documento.
 """
-st.info(instrucciones, icon="ℹ️")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -72,7 +71,8 @@ if True:
             #st.subheader(titulo)
             st.markdown(f'<a href="{pdf_url}">Enlace al documento</a>', unsafe_allow_html=True)
             st.write(resumen)
-            st.markdown('Plantea tus cuestiones a continuacion')
+            #st.markdown('Plantea tus cuestiones a continuacion')
+            st.info(instrucciones, icon="ℹ️")
 
             for message in st.session_state.messages:
                   with st.chat_message(message["role"]):
