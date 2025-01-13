@@ -58,7 +58,7 @@ instrucciones = """
 Puedes usar el chat para 
 hacer preguntas específicas sobre la guía y el asistente te dará respuestas basadas en el documento.
 """
-st.info(instrucciones, icon="ℹ️"
+st.info(instrucciones, icon="ℹ️")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
